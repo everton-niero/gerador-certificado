@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
+import { NavbarComponent } from './_components/navbar/navbar.component';
+import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { PrimaryButtonComponent } from './_components/primary-button/primary-button.component';
+import { SecondaryButtonComponent } from './_components/secondary-button/secondary-button.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NavbarComponent, CommonModule, PrimaryButtonComponent, SecondaryButtonComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'gerador-certificado';
+  exibeNavbar: boolean = true;
 }
